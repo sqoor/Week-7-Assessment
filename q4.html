@@ -3,10 +3,44 @@
 
 <head>
 	<!-- WRITE YOUR CODE UNDER THIS LINE          -->
+	<title>Q4</title>
+	<style>
+		#no {
+			background-color: red;
+		}
+
+		#yes {
+			background-color: green;
+		}
+	</style>
+
+	<!-- scripts -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function () {
+			console.log('jQuery is working....');
+			var div = $('.main');
+			var noBtn = $('#no');
+			var yesBtn = $('#yes');
+
+			noBtn.on('click', function () {
+				div.css('background-color', 'red');
+			});
+
+			yesBtn.on('click', function () {
+				div.css('background-color', 'green');
+			});
+		});
+	</script>
 </head>
 
 <body>
 	<!-- WRITE YOUR CODE UNDER THIS LINE          -->
+	<div class="main">Main div is here</div>
+	<button id="no">Red</button>
+	<button id="yes">Green</button>
 </body>
 
 </html>

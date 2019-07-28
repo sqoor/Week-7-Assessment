@@ -2,7 +2,7 @@ console.log('GOOD LUCK 👩‍💻 👨‍💻')
 // Please focus
 
 /* Q1:
-Usind Map
+Using Map
 Create a function called MultiByNum1OrNum2
 that takes an array of numbers and two numbers as a parameter
 and return a new array after mutiple each elemnt to the num1
@@ -23,8 +23,15 @@ Output =>
 
 */
 
-function MultiByNum1OrNum2() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function MultiByNum1OrNum2(numsArray, num1, num2) {
+  // WRITE YOUR CODE UNDER THIS LINE
+  return numsArray.map(function(element) {
+    if(element % num1 === 0) {
+      return element * num1;
+    }
+
+    return element * num2;
+  });       
 }
 
 /* Q2:
@@ -58,8 +65,9 @@ Output =>
 ]
 */
 
-function longerAndYounger() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function longerAndYounger(objectsArray, num1, num2) {
+  // WRITE YOUR CODE UNDER THIS LINE
+  return objectsArray.filter(element => element.name.length > num1 && element.age < num2);      
 }
 
 /* Q3:
@@ -89,9 +97,32 @@ Output =>
 "alice, fried chiken, pizaa, burger, hot dog, eggs"
   
 */
-function nameAndAllFoods() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+
+// function nameAndAllFoods(objectsArray, number) {
+//   // WRITE YOUR CODE UNDER THIS LINE
+//   return  objectsArray.reduce(function(result, element, index) {
+//     if(index === number) {
+//       return element.name + ', ' + element.food + result;
+//     }
+
+//     return result + ', ' + element.food;
+//   }, ''); 
+// }
+
+
+function nameAndAllFoods(objectsArray, number) {
+  // WRITE YOUR CODE UNDER THIS LINE
+  return  objectsArray.reduce(function(result, element, index) {
+    if(index === number) {
+      result = element.name + result;
+    }
+
+    return result + ', ' + element.food;
+  }, ''); 
 }
+
+
+
 
 
 /*
